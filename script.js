@@ -10,15 +10,15 @@ $(document).on("click", "a.remove" , function() {
   $(this).parent().remove();
 });
 
-// Removes/Addes Muted text class from Item
+// Removes/Addes Muted text class and checks unchecks Item
 $(document).on("click", "ul li" , function() {
-  if("ul li checkbox:checked" && $(this).hasClass('text-muted')){
+  if($(this).hasClass('text-muted')){
     $(this).removeClass('text-muted')
-    $('[type=checkbox]').prop("checked", false)
+    $(this).children().prop("checked", false)
     return
   }
   $(this).addClass('text-muted')
-  $('[type=checkbox]').prop("checked", true)
+  $(this).children().prop("checked", true)
 });
 
 // Grab todo item from Input field and push to DOM
