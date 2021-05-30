@@ -10,6 +10,15 @@ $(document).on("click", "a.remove" , function() {
   $(this).parent().remove();
 });
 
+// Removes/Addes Muted text class from Item
+$(document).on("click", "ul li" , function() {
+  if($(this).hasClass('text-muted')){
+    $(this).removeClass('text-muted')
+    return
+  }
+  $(this).addClass('text-muted')
+});
+
 // Grab todo item from Input field and push to DOM
 $('#form').on('keypress',function(e) {
   if(e.which == 13) {
@@ -19,8 +28,4 @@ $('#form').on('keypress',function(e) {
     e.preventDefault()
   }
 });
-
-$("ul li").click(function(){
-  this.addClass('text-muted')
-})
 })    
