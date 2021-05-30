@@ -2,7 +2,7 @@ $(function(){
 
 //Add item to list
 function listItem(item){
-  $(".todolist").append(`<li>${item} <a href='#' class='remove'>×</a></li>`)
+  $(".todolist").append(`<li><input type='checkbox'> ${item} <a href='#' class='remove'>×</a></li>`)
 }
 
 // Removes item from DOM
@@ -12,11 +12,13 @@ $(document).on("click", "a.remove" , function() {
 
 // Removes/Addes Muted text class from Item
 $(document).on("click", "ul li" , function() {
-  if($(this).hasClass('text-muted')){
+  if("ul li checkbox:checked" && $(this).hasClass('text-muted')){
     $(this).removeClass('text-muted')
+    $('[type=checkbox]').prop("checked", false)
     return
   }
   $(this).addClass('text-muted')
+  $('[type=checkbox]').prop("checked", true)
 });
 
 // Grab todo item from Input field and push to DOM
