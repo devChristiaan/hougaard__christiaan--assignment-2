@@ -39,8 +39,11 @@ ul, ol {
 }
 
 ul li {
+  display: inline-block;
   cursor: move;
   list-style-type: none;
+  width: 80%;
+  height: 35px;
 }
 
 a {
@@ -110,4 +113,11 @@ input {
 
 .text-muted {
   color: #999;
+  text-decoration: line-through;
 }
+
+input[type=checkbox].css-label.lrg{
+  background-position: 0 -20px;
+}
+
+.vlad{background-image:url(http://csscheckbox.com/checkboxes/vlad.png);}
