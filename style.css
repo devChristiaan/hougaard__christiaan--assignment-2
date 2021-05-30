@@ -115,9 +115,3 @@ input {
   color: #999;
   text-decoration: line-through;
 }
-
-input[type=checkbox].css-label.lrg{
-  background-position: 0 -20px;
-}
-
-.vlad{background-image:url(http://csscheckbox.com/checkboxes/vlad.png);}
