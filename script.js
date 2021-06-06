@@ -11,7 +11,7 @@ function listItem(item){
 }
 
 // Removes item from DOM
-$(document).on("click", "a.remove" , function() {
+$(document).on("click", "ul li a.remove" , function() {
   $(this).parent().remove();
 });
 
@@ -45,8 +45,6 @@ $('#form').on('keypress',function(e) {
   }
 });
 
-$(document).load(function() {
-  $("#sortable").sortable();
-  $("#sortable").disableSelection();
-});
+$("#sortable").sortable();
+
 })
