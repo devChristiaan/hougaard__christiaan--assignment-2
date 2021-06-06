@@ -2,7 +2,7 @@ $(function(){
 
 //Add item to list
 function listItem(item){
-  $(".todolist").append(`<li><input type='checkbox'> ${item} <a href='#' class='remove'>×</a></li>`)
+  $(".todolist").append(`<li><input type='checkbox' class="form-checkbox"><span class="item">${item}</span><a href='#' class='remove'>×</a></li>`)
 }
 
 // Removes item from DOM
@@ -25,6 +25,14 @@ $(document).on("click", "ul li" , function() {
 $('#form').on('keypress',function(e) {
   if(e.which == 13) {
     let todo = $('.form-control').val()
+    e.preventDefault()
+    if (todo === "") {
+      $(this).addClass('alert')
+      setInterval(()=>{
+        $(this).removeClass('alert')
+      }, 2000)
+      return
+    }
     listItem(todo)
     $('.form-control').val("")
     e.preventDefault()

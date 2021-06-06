@@ -41,11 +41,16 @@ ul, ol {
 ul li {
   cursor: move;
   list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2px;
 }
 
 a {
   color: #428bca;
   text-decoration: none;
+  font-size: 35px;
+  margin-top: -13px;
 }
 
 main {
@@ -62,6 +67,10 @@ main h1 {
   font-size: 63px;
   line-height: 1;
   color: inherit;
+}
+
+h3 {
+  margin-top: 25px;
 }
 
 .container {
@@ -99,15 +108,36 @@ input {
   transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+.form-checkbox {
+  height: 18px;
+  width: 18px;
+  margin-top: 15px;
+}
+
+.todolist {
+  margin-top: 35px;
+}
+
 .alert {
-  color: #b94a48;
-  background-color: #f2dede;
-  border: 1px solid #eed3d7;
-  padding: 15px;
+  color: #ff0702;
+  background-color: #ff0702;
+  border: 1px solid #ff0702;
+  padding: 2px;
   margin-bottom: 20px;
   border-radius: 4px;
 }
 
 .text-muted {
   color: #999;
+  text-decoration: line-through;
+}
+
+.item {
+  padding-left: 20px;
+}
+
+footer {
+  margin-top: 35px;
+  text-align: center;
+  border-top: rgb(61, 61, 61) 1px solid;
 }
