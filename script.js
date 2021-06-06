@@ -25,6 +25,14 @@ $(document).on("click", "ul li" , function() {
 $('#form').on('keypress',function(e) {
   if(e.which == 13) {
     let todo = $('.form-control').val()
+    e.preventDefault()
+    if (todo === "") {
+      $(this).addClass('alert')
+      setInterval(()=>{
+        $(this).removeClass('alert')
+      }, 2000)
+      return
+    }
     listItem(todo)
     $('.form-control').val("")
     e.preventDefault()
