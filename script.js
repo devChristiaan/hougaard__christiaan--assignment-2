@@ -1,5 +1,10 @@
 $(function(){
 
+//set focus on input field on load
+$(document).ready(function (){
+  $('.form-control').focus()
+})
+
 //Add item to list
 function listItem(item){
   $(".todolist").append(`<li><input type='checkbox' class="form-checkbox"><span class="item">${item}</span><a href='#' class='remove'>×</a></li>`)
@@ -38,4 +43,4 @@ $('#form').on('keypress',function(e) {
     e.preventDefault()
   }
 });
-})    
+})
