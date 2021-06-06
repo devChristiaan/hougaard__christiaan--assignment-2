@@ -2,7 +2,7 @@ $(function(){
 
 //Add item to list
 function listItem(item){
-  $(".todolist").append(`<li><input type='checkbox' class="form-checkbox h-4 w-4">${item}</li><a href='#' class='remove'>×</a>`)
+  $(".todolist").append(`<li><input type='checkbox' class="form-checkbox"><span class="item">${item}</span><a href='#' class='remove'>×</a></li>`)
 }
 
 // Removes item from DOM
