@@ -49,6 +49,8 @@ ul li {
 a {
   color: #428bca;
   text-decoration: none;
+  font-size: 35px;
+  margin-top: -13px;
 }
 
 main {
@@ -117,10 +119,10 @@ input {
 }
 
 .alert {
-  color: #b94a48;
-  background-color: #f2dede;
-  border: 1px solid #eed3d7;
-  padding: 15px;
+  color: #ff0702;
+  background-color: #ff0702;
+  border: 1px solid #ff0702;
+  padding: 2px;
   margin-bottom: 20px;
   border-radius: 4px;
 }
