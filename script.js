@@ -24,6 +24,7 @@ $(document).on("click", "ul li" , function() {
   }
   $(this).addClass('text-muted')
   $(this).children().prop("checked", true)
+  $(this).appendTo($('ul'))
 });
 
 // Grab todo item from Input field and push to DOM
@@ -42,5 +43,10 @@ $('#form').on('keypress',function(e) {
     $('.form-control').val("")
     e.preventDefault()
   }
+});
+
+$(document).load(function() {
+  $("#sortable").sortable();
+  $("#sortable").disableSelection();
 });
 })
