@@ -36,7 +36,7 @@ $('#form').on('keypress',function(e) {
       $(this).addClass('alert')
       setInterval(()=>{
         $(this).removeClass('alert')
-      }, 2000)
+      }, 3000)
       return
     }
     listItem(todo)
