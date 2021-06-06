@@ -67,6 +67,10 @@ main h1 {
   color: inherit;
 }
 
+h3 {
+  margin-top: 25px;
+}
+
 .container {
   max-width: 750px;
   padding: 0 15px;
