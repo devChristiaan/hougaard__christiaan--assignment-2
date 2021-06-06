@@ -45,6 +45,7 @@ $('#form').on('keypress',function(e) {
   }
 });
 
+//Drag list elements
 $("#sortable").sortable();
 
 })
