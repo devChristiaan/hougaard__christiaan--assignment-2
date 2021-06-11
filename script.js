@@ -1,12 +1,17 @@
 $(function(){
 
+//set focus on input field on load
+$(document).ready(function (){
+  $('.form-control').focus()
+})
+
 //Add item to list
 function listItem(item){
   $(".todolist").append(`<li><input type='checkbox' class="form-checkbox"><span class="item">${item}</span><a href='#' class='remove'>×</a></li>`)
 }
 
 // Removes item from DOM
-$(document).on("click", "a.remove" , function() {
+$(document).on("click", "ul li a.remove" , function() {
   $(this).parent().remove();
 });
 
@@ -19,6 +24,7 @@ $(document).on("click", "ul li" , function() {
   }
   $(this).addClass('text-muted')
   $(this).children().prop("checked", true)
+  $(this).appendTo($('ul'))
 });
 
 // Grab todo item from Input field and push to DOM
@@ -30,7 +36,7 @@ $('#form').on('keypress',function(e) {
       $(this).addClass('alert')
       setInterval(()=>{
         $(this).removeClass('alert')
-      }, 2000)
+      }, 3000)
       return
     }
     listItem(todo)
@@ -38,4 +44,8 @@ $('#form').on('keypress',function(e) {
     e.preventDefault()
   }
 });
-})    
+
+//Drag list elements
+$("#sortable").sortable();
+
+})
